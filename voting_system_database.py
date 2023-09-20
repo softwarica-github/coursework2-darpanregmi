@@ -189,7 +189,7 @@ def getUserByCitizenship(citizenship):
 def updateUserByCitizenship(name, phone, gender, district, citizenship):
     try:
         mycursor = mydb.cursor()
-        sql ="""UPDATE voters SET name='{0}', phone='{1}', gender='{2}', district='{3} 
+        sql ="""UPDATE voters SET name='{0}', phone='{1}', gender='{2}', district='{3}' 
                 WHERE citizenship='{4}'""".format(name, phone, gender, district, citizenship)
         mycursor.execute(sql)
         mydb.commit()
